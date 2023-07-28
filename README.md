@@ -8,8 +8,8 @@
     - create database = create database simple_bank owner dockerpsql;
     - import file .sql to simple_bank database
    
-3. #### You can also perform database migration  
+3. #### You can also perform database migration without doing it manually (as in point number 2).
 ```bash
 go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 ```
-and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile) for simplify execution without doing it manually (as in point number 2).
+and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile) for simplify execution
