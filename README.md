@@ -24,4 +24,4 @@ and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile)
     ```
     - set config sqlc.yaml
 
-6. #### implements [query.sql]() to generate what do you want 😁
+6. #### implements [query.sql](https://github.com/EchoEdyP/simple-bank/tree/main/db/query) to generate what do you want 😁
