@@ -19,4 +19,9 @@ migrate-up:
 migrate-down:
 	migrate -path db/migrations -database "postgresql://root:1903@localhost:9876/simple_bank?sslmode=disable" -verbose down
 
-.PHONY: pull-db-images run-postgres create-db grant-all-privileges drop-db migrate-up migrate-down
+login-db:
+	sudo docker exec -it postgres15.3 psql -U root
+
+sqlc-generate:
+	sqlc generate
+.PHONY: pull-db-images run-postgres create-db grant-all-privileges drop-db migrate-up migrate-down login-db sqlc-generate
