@@ -24,4 +24,8 @@ login-db:
 
 sqlc-generate:
 	sqlc generate
-.PHONY: pull-db-images run-postgres create-db grant-all-privileges drop-db migrate-up migrate-down login-db sqlc-generate
+
+tests:
+	go test -v -cover ./...
+
+.PHONY: pull-db-images run-postgres create-db grant-all-privileges drop-db migrate-up migrate-down login-db sqlc-generate tests
