@@ -8,7 +8,12 @@
     - create database = create database simple_bank owner root;
     - import file .sql to simple_bank database
    
-3. #### You can also perform database migration without doing it manually (as in point number 2).
+3. #### You can also perform database migration without doing it manually (as in point number 2) but you still do: ```pull database from docker hub```  ⤵️
+```bash
+docker pull postgres:15.3-alpine3.18
+```
+
+```install library for```[Go Database migrations](https://github.com/golang-migrate/migrate) ⤵️
 ```bash
 go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 ```
@@ -28,5 +33,5 @@ and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile)
 
 7. #### implements unit tests for this [query.sql](https://github.com/EchoEdyP/simple-bank/tree/main/db/query) file
     - install [testify](https://github.com/stretchr/testify)
-    - implement [main_test.go]() to connect DB
-    - implement [account_test.go]() for test the func and also [random_generate.go]() for generate random data
+    - implement [main_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/main_test.go) to connect DB
+    - implement [account_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/account_test.go) for test the func and also [random_generate.go](https://github.com/EchoEdyP/simple-bank/blob/main/utils/random-generate.go) for generate random data
