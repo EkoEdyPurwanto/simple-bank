@@ -2,7 +2,7 @@
 
 ![Simple Bank Schema](https://github.com/EchoEdyP/simple-bank/blob/main/simple-bank-schema.png)
 
-### Setup Database on Docker:
+### Setup Database & Perform Database Migration on Docker (manually)
 
 1. Pull the database from Docker Hub:
 ```bash
@@ -26,9 +26,9 @@ CREATE DATABASE simple_bank OWNER root;
 
 5. Import the `.sql` file into the `simple_bank` database.
 
-### Perform Database Migration
+### Setup Database & Perform Database Migration on Docker (automatically)
 
-You can also perform database migration automatically without doing it manually (as in point number 2) using [Go Database migrations](https://github.com/golang-migrate/migrate). First, make sure you have pulled the appropriate database image:
+You can also perform database migration automatically without doing it manually using [Go Database migrations](https://github.com/golang-migrate/migrate). First, make sure you have pulled the appropriate database image:
 
 ```bash
 docker pull postgres:15.3-alpine3.18
