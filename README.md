@@ -14,7 +14,7 @@ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@lat
 ```
 and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile) for simplify execution
 
-4. #### install [SQLC](https://sqlc.dev/)
+4. #### install [SQLC](https://sqlc.dev/) and also [Go Postgres driver for database/sql](https://github.com/lib/pq)
 
 5. #### implements SQLC:
     - cd /to/your/path/project
@@ -25,3 +25,8 @@ and using [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Makefile)
     - set config sqlc.yaml
 
 6. #### implements [query.sql](https://github.com/EchoEdyP/simple-bank/tree/main/db/query) to generate what do you want 😁
+
+7. #### implements unit tests for this [query.sql](https://github.com/EchoEdyP/simple-bank/tree/main/db/query) file
+    - install [testify](https://github.com/stretchr/testify)
+    - implement [main_test.go]() to connect DB
+    - implement [account_test.go]() for test the func and also [random_generate.go]() for generate random data
