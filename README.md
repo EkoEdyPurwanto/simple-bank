@@ -46,7 +46,7 @@ Use the provided [Makefile](https://github.com/EchoEdyP/simple-bank/blob/main/Ma
 
 1. Install [SQLC](https://sqlc.dev/).
 
-2. Install the Go Postgres driver for database/sql, [Go Postgres driver for database/sql](https://github.com/lib/pq).
+2. Install [Go Postgres driver for database/sql](https://github.com/lib/pq).
 
 ### Implement SQLC:
 
