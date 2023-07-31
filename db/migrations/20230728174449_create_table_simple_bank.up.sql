@@ -14,10 +14,10 @@ CREATE TABLE accounts (
 -- This table has a foreign key constraint referencing the 'id' column of the 'accounts' table.
 CREATE TABLE entries (
                          id bigserial PRIMARY KEY,
-                         accounts_id bigint NOT NULL,
+                         account_id bigint NOT NULL,
                          amount bigint NOT NULL,
                          created_at timestamp NOT NULL DEFAULT NOW(),
-                         FOREIGN KEY (accounts_id) REFERENCES accounts (id)
+                         FOREIGN KEY (account_id) REFERENCES accounts (id)
 );
 
 -- Then, we create the 'transfers' table, which will represent the transfer transactions between accounts.
@@ -35,7 +35,7 @@ CREATE TABLE transfers (
 
 -- We create several indexes to improve query performance on frequently accessed columns.
 CREATE INDEX ON accounts (owner);
-CREATE INDEX ON entries (accounts_id);
+CREATE INDEX ON entries (account_id);
 CREATE INDEX ON transfers (from_account_id);
 CREATE INDEX ON transfers (to_account_id);
 CREATE INDEX ON transfers (from_account_id, to_account_id);
