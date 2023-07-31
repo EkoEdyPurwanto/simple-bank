@@ -4,6 +4,12 @@ pull-db-images:
 run-postgres:
 	sudo docker run --name postgres15.3 -p 9876:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=1903 -d postgres:15.3-alpine3.18
 
+start-postgres:
+	sudo docker container start postgres15.3
+
+stop-postgres:
+	sudo docker container stop postgres15.3
+
 create-db:
 	sudo docker exec -it postgres15.3 createdb --username=root --owner=root simple_bank
 
@@ -28,4 +34,4 @@ sqlc-generate:
 tests:
 	go test -v -cover ./...
 
-.PHONY: pull-db-images run-postgres create-db grant-all-privileges drop-db migrate-up migrate-down login-db sqlc-generate tests
+.PHONY: pull-db-images run-postgres start-postgres stop-postgres create-db grant-all-privileges drop-db migrate-up migrate-down login-db sqlc-generate tests
