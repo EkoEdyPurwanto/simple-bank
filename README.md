@@ -72,6 +72,6 @@ Implement your desired queries in the [query.sql](https://github.com/EchoEdyP/si
 
 2. Implement [main_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/main_test.go) to connect to the database.
 
-3. Implement [account_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/account_test.go) to test the functions.
+3. Implement [account_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/account_test.go), [entry_test.go](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/entry_test.go), [transfer_test](https://github.com/EchoEdyP/simple-bank/blob/main/db/sqlc/transfer_test.go) to test the functions.
 
 4. Additionally, you can use [random_generate.go](https://github.com/EchoEdyP/simple-bank/blob/main/utils/random-generate.go) to generate random data for testing purposes.
