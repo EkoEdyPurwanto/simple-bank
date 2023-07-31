@@ -62,9 +62,9 @@ sqlc init
 
 3. Set the configuration in `sqlc.yaml`.
 
-### Implement query.sql
+### Implement .sql
 
-Implement your desired queries in the [query.sql](https://github.com/EchoEdyP/simple-bank/tree/main/db/query) file.
+Implement queries [account.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/account.sql), [entry.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/entry.sql), [transfer.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/transfer.sql) .
 
 ### Implement Unit Tests for query.sql
 
