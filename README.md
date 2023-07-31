@@ -66,7 +66,7 @@ sqlc init
 
 Implement queries [account.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/account.sql), [entry.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/entry.sql), [transfer.sql](https://github.com/EchoEdyP/simple-bank/blob/main/db/query/transfer.sql) .
 
-### Implement Unit Tests for query.sql
+### Implement Unit Tests
 
 1. Install [testify](https://github.com/stretchr/testify) for testing.
 
